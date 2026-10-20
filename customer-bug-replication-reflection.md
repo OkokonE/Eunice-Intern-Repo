@@ -26,15 +26,27 @@ Other teams handle "Cannot Reproduce" customer bugs by reviewing the bug report,
 
 ### Reflection
 
-1. If a customer reports a crash but you can’t reproduce it, what are your next steps?
-My next step would be to request more details from the customer, including their device model, operating system, app version, platform, network or mobile service provider, and the steps they took before the crash. I would also request a screenshot, screen recording, or crash logs if available. I would use this information to recreate the customer's environment and attempt to reproduce the crash. If I still couldn't reproduce it, I would document my findings, collaborate with the developer, and recommend additional logging to help identify the cause if the crash happens again.
+1. How would you report a bug that only happens occasionally?
+I would clearly describe the bug and include the steps I took, the device details, the operating system version, and any available screenshots or screen recordings.
+I would also mention how often the bug occurs and under what conditions I observed it. I would also add timestamp.
 
-2. When should you ask developers to add more logging, and what kind of logs would help?
-I  would ask developers to add more logging when a bug occurs intermittently, cannot be reproduced consistently, or when the available information is insufficient to identify its cause.
+2. If a customer reports a crash but you can't reproduce it, what are your next steps?
+I would ask for more information from the customer, including their device details, operating system version, app version, steps taken before the crash, and any error messages or screenshots. I would check the available crash logs and try to reproduce the issue under similar conditions. If necessary, I would work with the developer to investigate further.
 
-I would request logs showing the user's action, timestamps, session status changes, API requests and responses, and any errors or exceptions. These logs would help the team understand what happened before, during, and after the failure. I would also ensure that sensitive information, such as passwords and authentication tokens, is not recorded.
+3. If a developer marks a bug as "Not reproducible", what's your next step?
+I would review the bug report to ensure that the reproduction steps and environment details are clear and complete.
+I would then try to reproduce the bug again and provide additional evidence, such as a screen recording or logs. 
+If the developer still cannot reproduce it, I would request a meeting to share my screen and demonstrate the issue.
 
-3. What are some common patterns in bugs that only occur for some users but not others?
-Some common patterns in bugs that affect certain users but not others include device-specific issues, differences in operating system or browser versions, poor network connections, and variations in user permissions or account settings.
+4. When should you ask developers to add more logging, and what kind of logs would help?
+I would ask developers to add more logging when a bug occurs intermittently, cannot be reproduced consistently, or lacks enough evidence to identify its cause. 
+Useful logs include error messages, timestamps, API request and response details, and information about the user's actions before the issue occurred. 
+These logs can help identify what happened and where the problem originated.
 
-For example, during my internship in 2023, I encountered an issue while testing an app on my mobile device. The built-in keyboard appeared to be hidden, preventing me from typing. However, when another tester tried to reproduce the issue on a different device, the keyboard was fully accessible. This suggested that the issue might be related to my device or its configuration. This experience taught me the importance of testing across different devices and environments to identify bugs that may not affect every user.
+5. What are some common patterns in bugs that only occur for some users but not others?
+- Device differences
+- Operating system differences
+- Network conditions
+- Browser differences
+- User-specific data
+- Timing and sequence of actions
